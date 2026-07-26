@@ -98,6 +98,8 @@ public void OnRegisterCustomRoles()
 {
 	g_crJester = RegisterCustomRole
 	(
+		//prototype version
+		1,
 		// char[] id,
 		"jester",
 		// char[] displayName,
