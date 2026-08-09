@@ -30,6 +30,8 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
+	LoadTranslations("Jester.phrases.txt");
+
 	jColor[0] = 255;
 	jColor[1] = 255;
 	jColor[2] = 255;
@@ -245,14 +247,14 @@ public void JesterRoundStart()
 	SetConVarInt(g_cvJesterRound, 1, false, false);
 	g_jesterExists = true;
 	CreateTimer(1.0, Timer_CheckJesterTK, _, TIMER_REPEAT);
-	PrintToChatAll("\x07FF0077There is a Jester-Traitor this round!");
-	PrintToChatAll("\x07FF0077Don't get tricked into killing the Jester-Traitor!");
-	PrintToChat(g_JesterClient, "\x07FF0000YOU are the Jester-Traitor! Trick someone into killing you as another way to win for your team! You deal no damage.");
+	PrintToChatAll("\x07FF0077%t", "JesterThisRound");
+	PrintToChatAll("%t", "DontGetTricked");
+	PrintToChat(g_JesterClient, "%t", "YouAreJester");
 	EmitSoundToClient(g_JesterClient, "ttt/jesterreveal.wav", g_JesterClient, SNDCHAN_AUTO, 70, SND_NOFLAGS, 1.0);
 	
 	//showhudtext for jester client
 	SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
-	ShowHudText(g_JesterClient, AUTO_CHANNEL, "YOU are the Jester Traitor!");
+	ShowHudText(g_JesterClient, AUTO_CHANNEL, "%t"), "YouAreJester_Short";
 	
 	//ClientCommandAll sim
 	for (int i = 1; i <= MaxClients; i++)
@@ -265,16 +267,16 @@ public void JesterRoundStart()
 			if(i != g_JesterClient && GetClientRole(i) == TR_Traitor) //notify traitors of their teammate
 			{
 				// non-jester traitors only
-				PrintToChat(i, "\x07FF0000%N\x07FF5500 is your Jester teammate. Trick innocents into killing them as another way to win!", g_JesterClient);
+				PrintToChat(i, "%t", "JesterTeammate", g_JesterClient);
 				SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
-				ShowHudText(i, AUTO_CHANNEL, "%N is your Jester teammate.", g_JesterClient);
+				ShowHudText(i, AUTO_CHANNEL, "%t", "JesterTeammate_Short", g_JesterClient);
 			}
 			
 			if(GetClientRole(i) != TR_Traitor) //notify non-traitors of a jester
 			{
 				//non-traitors only
 				SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
-				ShowHudText(i, AUTO_CHANNEL, "There is a Jester-Traitor this round!");
+				ShowHudText(i, AUTO_CHANNEL, "%t", "JesterThisRound");
 			}
 		}
 	}
@@ -292,7 +294,7 @@ public void JesterWinRound()
 		{
 			EmitSoundToClient(i, "ttt/jesterwins.wav", i, SNDCHAN_AUTO, 70, SND_NOFLAGS, 1.0);
 			SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
-			ShowHudText(i, AUTO_CHANNEL, "Jester killed! Traitors win!");
+			ShowHudText(i, AUTO_CHANNEL, "%t", "JesterKilled");
 		}
 	}
 }
@@ -302,7 +304,7 @@ public void JesterTeamKilled(int attacker)
 	SetConVarInt(g_cvJesterRound, 0, false, false);
 	g_jesterExists = false;
 	g_JesterClient = 0;
-	PrintToChatAll("\x07FF0077The Jester has been teamkilled by a Traitor!");
+	PrintToChatAll("%t", "\x07FF0077JesterTeamkilled");
 	EmitSoundToClient(attacker, "ttt/wrongvictim.wav", attacker, SNDCHAN_AUTO, 70, SND_NOFLAGS, 1.0);
 	
 	for (int i = 1; i <= MaxClients; i++)
@@ -310,7 +312,7 @@ public void JesterTeamKilled(int attacker)
 		if (IsClientInGame(i))
 		{
 			SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
-			ShowHudText(i, AUTO_CHANNEL, "The Jester has been teamkilled by a Traitor!");
+			ShowHudText(i, AUTO_CHANNEL, "%t", "JesterTeamkilled");
 		}
 	}
 }
