@@ -247,8 +247,6 @@ public void JesterRoundStart()
 	SetConVarInt(g_cvJesterRound, 1, false, false);
 	g_jesterExists = true;
 	CreateTimer(1.0, Timer_CheckJesterTK, _, TIMER_REPEAT);
-	PrintToChatAll("\x07FF0077%t", "JesterThisRound");
-	PrintToChatAll("%t", "DontGetTricked");
 	PrintToChat(g_JesterClient, "%t", "YouAreJester");
 	EmitSoundToClient(g_JesterClient, "ttt/jesterreveal.wav", g_JesterClient, SNDCHAN_AUTO, 70, SND_NOFLAGS, 1.0);
 	
@@ -277,6 +275,8 @@ public void JesterRoundStart()
 				//non-traitors only
 				SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
 				ShowHudText(i, AUTO_CHANNEL, "%t", "JesterThisRound");
+				PrintToChatAll("\x07FF0077%t", "JesterThisRound");
+				PrintToChatAll("%t", "DontGetTricked");
 			}
 		}
 	}
