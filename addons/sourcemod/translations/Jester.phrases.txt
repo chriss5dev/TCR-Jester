@@ -4,42 +4,50 @@
     {
         "en"    "There is a Jester-Traitor this round!"
         "es"    "¡Hay un Bufón Traidor esta ronda!"
+        "ro"    "Este un Bufon-Trădător în runda aceasta!"
     }
     "DontGetTricked"
     {
         "en"    "FF0077Don't get tricked into killing the Jester-Traitor!"
         "es"    "FF0077Ten cuidado... Si lo matas, ¡los Traidores ganan!" //Careful... If you kill him, the Traitors win!
+        "ro"    "FF0077Nu fi păcălit să îl omori pe Bufonul-Trădător!"
     }
     "YouAreJester"
     {
         "en"    "FF0077YOU are the Jester-Traitor! Trick someone into killing you as another way to win for your team! You deal no damage."
         "es"    "FF0077¡TÚ eres el Bufón! ¡Engaña a alguien para que te maten para que tu equipo gane inmediatamente! No puedes hacer daño." 
+        "ro"    "FF0077TU eşti Bufonul-Trădător! Păcăleşte pe cineva să te omoare pentru ca echipa ta să câştige! Nu poţi răni pe nimeni."
     }
     "YouAreJester_Short"
     {
         "en"    "FF0077YOU are the Jester-Traitor!"
         "es"    "FF0077¡TÚ eres el Bufón!" 
+        "ro"    "FF0077TU eşti Bufonul-Trădător!"
     }
     "JesterTeammate"
     {
         "#format"   "{1:N}"
         "en"    "FF0000{1} FF5500is your Jester teammate. Trick innocents into killing them as another way to win!"
         "es"    "FF0000{1} FF5500es tu compañero Bufón. Engaña a los inocentes a que lo maten para que ustedes puedan ganar."
+        "ro"    "FF0000{1} FF5500este Bufonul tău aliat. Păcăleşte inocenţii să-l omoare ca o rută alternativă de câştig!"
     }
     "JesterTeammate_Short"
     {
         "#format"   "{1:N}"
         "en"    "FF0000{1} FF5500is your Jester teammate."
         "es"    "FF0000{1} FF5500es tu compañero Bufón."
+        "ro"    "FF0000{1} FF5500este Bufonul tău aliat."
     }
     "JesterKilled"
     {
         "en"    "FF0000Jester killed! Traitors win!"
         "es"    "FF0000¡El Bufón fue matado! ¡Ganan los Traidores!"
+        "ro"    "FF0000Bufonul a murit! Trădătorii au câştigat!"
     }
     "JesterTeamkilled"
     {
         "en"    "The Jester has been teamkilled by a Traitor!"
         "es"    "El Bufón fue matado por un Traidor..."
+        "ro"    "Bufonul a fost omorât de un Trădător! Runda continuă." //-II-. The round continues.
     }
 }
