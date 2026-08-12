@@ -1,6 +1,7 @@
 #include <sourcemod>
 #include <sdktools>
 #include <sdkhooks>
+#define TCR_PROTOTYPE_VERSION 2
 #include <treason>
 
 int g_crJester = -1;
@@ -24,7 +25,7 @@ public Plugin myinfo =
 	name = "TCR Jester-Traitor",
 	author = "chriss5",
 	description = "Adds the Jester role using Treason Custom Roles (TCR) from chriss5's Treason API (TAPI).",
-	version = "1.01",
+	version = "1.1",
 	url = "http://www.sourcemod.net/"
 };
 
@@ -101,7 +102,7 @@ public void OnRegisterCustomRoles()
 	g_crJester = RegisterCustomRole
 	(
 		//prototype version
-		1,
+		TCR_PROTOTYPE_VERSION,
 		// char[] id,
 		"jester",
 		// char[] displayName,
@@ -141,6 +142,8 @@ public void OnRegisterCustomRoles()
 		true,
 		// char[] poleModel,
 		"models/props_cluesystem/custom/jester/pole.mdl",
+		// bool isConfirmed,
+		false,
 		// bool discardRoleAbilities,
 		false,
 		// bool discardRoleGadgets,
