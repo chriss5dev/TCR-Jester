@@ -20,9 +20,9 @@
     }
     "YouAreJester_Short"
     {
-        "en"    "FF0077YOU are the Jester-Traitor!"
-        "es"    "FF0077¡TÚ eres el Bufón!" 
-        "ro"    "FF0077TU eşti Bufonul-Trădător!"
+        "en"    "YOU are the Jester-Traitor!"
+        "es"    "¡TÚ eres el Bufón!" 
+        "ro"    "TU eşti Bufonul-Trădător!"
     }
     "JesterTeammate"
     {
