@@ -48,6 +48,6 @@
     {
         "en"    "The Jester has been teamkilled by a Traitor!"
         "es"    "El Bufón fue matado por un Traidor..."
-        "ro"    "Bufonul a fost omorât de un Trădător! Runda continuă." //-II-. The round continues.
+        "ro"    "Bufonul a fost omorât de un Trădător!"
     }
 }
