@@ -25,7 +25,7 @@ public Plugin myinfo =
 	name = "TCR Jester-Traitor",
 	author = "chriss5",
 	description = "Adds the Jester role using Treason Custom Roles (TCR) from chriss5's Treason API (TAPI).",
-	version = "1.1",
+	version = "1.1.1",
 	url = "http://www.sourcemod.net/"
 };
 
@@ -278,8 +278,8 @@ public void JesterRoundStart()
 				//non-traitors only
 				SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
 				ShowHudText(i, AUTO_CHANNEL, "%t", "JesterThisRound");
-				PrintToChatAll("\x07FF0077%t", "JesterThisRound");
-				PrintToChatAll("%t", "DontGetTricked");
+				PrintToChat(i, "\x07FF0077%t", "JesterThisRound");
+				PrintToChat(i, "%t", "DontGetTricked");
 			}
 		}
 	}

@@ -40,9 +40,9 @@
     }
     "JesterKilled"
     {
-        "en"    "FF0000Jester killed! Traitors win!"
-        "es"    "FF0000¡El Bufón fue matado! ¡Ganan los Traidores!"
-        "ro"    "FF0000Bufonul a murit! Trădătorii au câştigat!"
+        "en"    "Jester killed! Traitors win!"
+        "es"    "¡El Bufón fue matado! ¡Ganan los Traidores!"
+        "ro"    "Bufonul a murit! Trădătorii au câştigat!"
     }
     "JesterTeamkilled"
     {
