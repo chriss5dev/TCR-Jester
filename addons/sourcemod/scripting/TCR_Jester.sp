@@ -255,7 +255,7 @@ public void JesterRoundStart()
 	
 	//showhudtext for jester client
 	SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
-	ShowHudText(g_JesterClient, AUTO_CHANNEL, "%t"), "YouAreJester_Short";
+	ShowHudText(g_JesterClient, AUTO_CHANNEL, "%t", "YouAreJester_Short");
 	
 	//ClientCommandAll sim
 	for (int i = 1; i <= MaxClients; i++)
@@ -268,6 +268,7 @@ public void JesterRoundStart()
 			if(i != g_JesterClient && GetClientRole(i) == TR_Traitor) //notify traitors of their teammate
 			{
 				// non-jester traitors only
+				PrintToChat(i, "\x07FF0077%t", "JesterThisRound");
 				PrintToChat(i, "%t", "JesterTeammate", g_JesterClient);
 				SetHudTextParams(ABOVECENTERTEXT_X, ABOVECENTERTEXT_Y, 5.0, 255, 0, 70, 255);
 				ShowHudText(i, AUTO_CHANNEL, "%t", "JesterTeammate_Short", g_JesterClient);
