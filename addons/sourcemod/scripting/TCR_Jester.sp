@@ -26,7 +26,7 @@ public Plugin myinfo =
 	author = "chriss5",
 	description = "Adds the Jester role using Treason Custom Roles (TCR) from chriss5's Treason API (TAPI).",
 	version = "1.1.1",
-	url = "http://www.sourcemod.net/"
+	url = "https://github.com/chriss5dev/TCR-Jester"
 };
 
 public void OnPluginStart()
